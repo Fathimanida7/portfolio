@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fathima Nida V V | Cybersecurity  Portfolio</title>
+<title>Fathima Nida V V | Cybersecurity Portfolio</title>
 
+<style>
 *{
     margin:0;
     padding:0;
@@ -24,8 +25,9 @@ nav{
     position:fixed;
     width:100%;
     top:0;
+    left:0;
     background:#0d1117;
-    padding:20px 40px;
+    padding:20px 8%;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -55,7 +57,9 @@ nav ul li a:hover{
 
 /* SECTIONS */
 section{
-    padding:120px 10%;
+    padding:120px 8%;
+    max-width:1200px;
+    margin:auto;
 }
 
 section h2{
@@ -82,7 +86,6 @@ section h2{
     color:#aaa;
 }
 
-/* BUTTON */
 .btn{
     margin-top:30px;
     padding:12px 25px;
@@ -147,8 +150,6 @@ footer{
     background:#161b22;
     margin-top:40px;
 }
-
-}
 </style>
 </head>
 
@@ -160,7 +161,7 @@ footer{
 <li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
-<li><a href="#certifications"> Achievements</a></li>
+<li><a href="#certifications">Achievements</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
@@ -182,8 +183,7 @@ in Computer Science and Engineering. My long-term goal is to build a career in a
 as an Assistant/Associate Professor, contributing to research, innovation, and student development.
 
 I am deeply interested in teaching subjects such as Network Security, Digital Forensics, 
-Cryptography, Web Security, and Ethical Hacking. I aspire to guide students in understanding 
-both theoretical foundations and practical cybersecurity applications.
+Cryptography, Web Security, and Ethical Hacking.
 </p>
 </section>
 
@@ -193,14 +193,13 @@ both theoretical foundations and practical cybersecurity applications.
 
 <div class="card">
 <h3>Programming</h3>
-<p>Python, C , HTML, CSS</p>
+<p>Python, C, HTML, CSS</p>
 </div>
-    
+
 <div class="card">
 <h3>Teaching Interests</h3>
 <p>Network Security, Cryptography, Digital Forensics, Ethical Hacking, Web Security</p>
 </div>
-
 
 <div class="card">
 <h3>Cybersecurity Tools</h3>
@@ -209,13 +208,14 @@ both theoretical foundations and practical cybersecurity applications.
 
 <div class="card">
 <h3>Academic Strengths</h3>
-<p>Analytical Thinking, Problem Solving, Research Orientation, Student Mentoring</p>
+<p>Analytical Thinking, Research Orientation, Student Mentoring</p>
 </div>
 
-    <div class="card">
+<div class="card">
 <h3>Platforms</h3>
-<p>Kali Linux, Windows </p>
+<p>Kali Linux, Windows</p>
 </div>
+
 </div>
 </section>
 
@@ -223,104 +223,31 @@ both theoretical foundations and practical cybersecurity applications.
 <h2>Research & Academic Projects</h2>
 <div class="card-container">
 
-
-<section id="projects">
-<h2>Research & Academic Projects</h2>
-
-<div class="card-container">
-
 <div class="card">
-<h3>Multi-Layer Security Algorithm Based on Encrypted Negative Password (ENP)</h3>
-<p><strong>Duration:</strong> 2025 – Present</p>
-
-<p><strong>Objective:</strong><br>
-To design a multi-layer authentication framework that secures user credentials
-against brute-force, rainbow table, and dictionary attacks.
-</p>
-
-<p><strong>Technologies Used:</strong><br>
-SHA-256, AES Encryption, Negative Password Transformation, Python
-</p>
-
-<p><strong>Key Contributions:</strong><br>
-• Integrated SHA-256 hashing with negative password transformation. <br>
-• Applied AES encryption to create layered password security. <br>
-• Designed a system ensuring original passwords remain protected even if database is compromised. <br>
-• Improved resistance against modern attack vectors.
-</p>
+<h3>Multi-Layer Security Algorithm (ENP)</h3>
+<p>Multi-layer authentication framework using SHA-256, AES and negative password transformation to secure credentials against modern attacks.</p>
 </div>
-
 
 <div class="card">
 <h3>Smart Attendance System</h3>
-<p><strong>Duration:</strong> July 2025 – Aug 2025</p>
-
-<p><strong>Objective:</strong><br>
-To develop a secure, automated attendance management system using facial recognition
-to eliminate manual entry errors.
-</p>
-
-<p><strong>Technologies Used:</strong><br>
-Firebase Authentication, Firestore, Face Detection API, HTML/CSS, JavaScript
-</p>
-
-<p><strong>Key Contributions:</strong><br>
-• Developed real-time entry/exit logging using camera-based recognition. <br>
-• Implemented role-based dashboards for Admin and Staff. <br>
-• Integrated secure login and sign-up using Firebase authentication. <br>
-• Centralized attendance and payroll data to improve efficiency.
-</p>
+<p>Facial recognition-based attendance system with Firebase authentication and role-based dashboards.</p>
 </div>
-
 
 <div class="card">
 <h3>Wi-Fi Indoor Location Tracking</h3>
-<p><strong>Duration:</strong> Aug 2023 – Apr 2024</p>
-
-<p><strong>Objective:</strong><br>
-To improve indoor positioning accuracy using enhanced WKNN algorithms
-and Kalman filtering techniques.
-</p>
-
-<p><strong>Technologies Used:</strong><br>
-Python (Flask), MySQL, HTML/CSS/JavaScript, Android Studio
-</p>
-
-<p><strong>Key Contributions:</strong><br>
-• Developed SAWKNN and SRL-KNN based positioning system. <br>
-• Built offline fingerprint database and real-time positioning workflow. <br>
-• Applied Kalman Filter to smooth tracking trajectories. <br>
-• Achieved improved accuracy compared to traditional WKNN models.
-</p>
+<p>Indoor positioning system using SAWKNN, SRL-KNN and Kalman filtering for improved accuracy.</p>
 </div>
-
 
 <div class="card">
 <h3>Online Rental House Platform</h3>
-<p><strong>Duration:</strong> Sept 2022 – Jan 2023</p>
-
-<p><strong>Objective:</strong><br>
-To create a web-based rental management platform connecting landlords and tenants
-through a centralized digital system.
-</p>
-
-<p><strong>Technologies Used:</strong><br>
-HTML, CSS, JavaScript, MySQL, PHP
-</p>
-
-<p><strong>Key Contributions:</strong><br>
-• Implemented Admin, Tenant, and Landlord dashboards. <br>
-• Enabled property listing, booking history, and notifications. <br>
-• Integrated secure authentication and database storage. <br>
-• Conducted unit, integration, and system testing for reliability.
-</p>
+<p>Web-based property management system connecting landlords and tenants with secure authentication.</p>
 </div>
 
 </div>
 </section>
 
 <section id="certifications">
-<h2>Academic Achievements & Certifications</h2>
+<h2>Academic Achievements</h2>
 <div class="card-container">
 
 <div class="card">
@@ -330,12 +257,12 @@ HTML, CSS, JavaScript, MySQL, PHP
 
 <div class="card">
 <h3>B.Tech in Computer Science & Engineering</h3>
-<p>Strong foundation in programming, networking, and system security.</p>
+<p>Strong foundation in programming and system security.</p>
 </div>
 
 <div class="card">
 <h3>Cybersecurity Certifications</h3>
-<p>Ethical Hacking, Cloud Computing, and Practical Security Labs.</p>
+<p>Ethical Hacking, Cloud Computing, Practical Security Labs.</p>
 </div>
 
 </div>
@@ -346,13 +273,12 @@ HTML, CSS, JavaScript, MySQL, PHP
 <div class="contact-info">
 <p>Email: fathimanidavv@gmail.com</p>
 <p>Location: Kozhikode, Kerala</p>
-<p>Research Collaboration: Open to Academic Projects & Teaching Opportunities</p>
-<p>LinkedIn: https://www.linkedin.com/in/fathima-nida-v-v-21b2ba212</p>
+<p>Open to Academic Projects & Teaching Opportunities</p>
 </div>
 </section>
 
 <footer>
-© 2026 Fathima Nida V V | Cybersecurity  Portfolio
+© 2026 Fathima Nida V V | Cybersecurity Portfolio
 </footer>
 
 </body>
