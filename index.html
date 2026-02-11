@@ -1,12 +1,287 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Test</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fathima Nida V V | Cybersecurity Portfolio</title>
+
 <style>
-body{background:black;color:white;}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#0d1117;
+    color:#ffffff;
+    line-height:1.6;
+}
+
+/* NAVIGATION */
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    background:#0d1117;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #1f2937;
+    z-index:1000;
+}
+
+nav h1{
+    font-size:18px;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav ul li a{
+    color:#ccc;
+    text-decoration:none;
+    font-size:14px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#00f7ff;
+}
+
+/* SECTION STRUCTURE */
+section{
+    padding:120px 8%;
+    max-width:1200px;
+    margin:auto;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:32px;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.hero h2{
+    font-size:42px;
+    max-width:900px;
+}
+
+.hero p{
+    margin-top:20px;
+    max-width:700px;
+    color:#aaa;
+}
+
+.btn{
+    margin-top:30px;
+    padding:12px 25px;
+    border:1px solid #00f7ff;
+    color:#00f7ff;
+    text-decoration:none;
+    width:fit-content;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#00f7ff;
+    color:#000;
+}
+
+/* CARDS */
+.card-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+    margin-top:30px;
+}
+
+.card{
+    background:#161b22;
+    padding:25px;
+    border-radius:10px;
+    border:1px solid #1f2937;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#00f7ff;
+}
+
+.card h3{
+    margin-bottom:15px;
+    font-size:18px;
+}
+
+.card p{
+    font-size:14px;
+    color:#ccc;
+}
+
+/* CONTACT */
+.contact-info{
+    max-width:600px;
+    margin:auto;
+    text-align:center;
+}
+
+.contact-info p{
+    margin:10px 0;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:25px;
+    background:#161b22;
+    margin-top:40px;
+}
 </style>
 </head>
+
 <body>
-<h1>Test Working</h1>
+
+<nav>
+<h1>FATHIMA NIDA V V</h1>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#certifications">Achievements</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<h2>M.Tech Cybersecurity Student & Aspiring Academic</h2>
+<p>
+M.Tech in Cybersecurity | Passionate about Teaching, Research & Academic Excellence.  
+Aiming to pursue a career as an Assistant/Associate Professor in Cybersecurity and Computer Science.
+</p>
+<a href="#projects" class="btn">View My Work</a>
+</section>
+
+<section id="about">
+<h2>About Me</h2>
+<p style="margin-top:20px; max-width:800px;">
+I am currently pursuing M.Tech in Cybersecurity with a strong academic foundation 
+in Computer Science and Engineering. My long-term goal is to build a career in academia 
+as an Assistant/Associate Professor, contributing to research, innovation, and student development.
+
+I am deeply interested in teaching subjects such as Network Security, Digital Forensics, 
+Cryptography, Web Security, and Ethical Hacking.
+</p>
+</section>
+
+<section id="skills">
+<h2>Technical Skills</h2>
+<div class="card-container">
+
+<div class="card">
+<h3>Programming</h3>
+<p>Python, C, HTML, CSS</p>
+</div>
+
+<div class="card">
+<h3>Teaching Interests</h3>
+<p>Network Security, Cryptography, Digital Forensics, Ethical Hacking, Web Security</p>
+</div>
+
+<div class="card">
+<h3>Cybersecurity Tools</h3>
+<p>Wireshark, Nmap, Burp Suite, Metasploit</p>
+</div>
+
+<div class="card">
+<h3>Academic Strengths</h3>
+<p>Analytical Thinking, Research Orientation, Student Mentoring</p>
+</div>
+
+<div class="card">
+<h3>Platforms</h3>
+<p>Kali Linux, Windows</p>
+</div>
+
+</div>
+</section>
+
+<section id="projects">
+<h2>Research & Academic Projects</h2>
+<div class="card-container">
+
+<div class="card">
+<h3>Multi-Layer Security Algorithm (ENP)</h3>
+<p>Multi-layer authentication framework using SHA-256, AES encryption and negative password transformation to secure credentials against brute-force and dictionary attacks.</p>
+</div>
+
+<div class="card">
+<h3>Smart Attendance System</h3>
+<p>Facial recognition-based attendance system integrated with Firebase authentication and role-based dashboards for automated tracking.</p>
+</div>
+
+<div class="card">
+<h3>Wi-Fi Indoor Location Tracking</h3>
+<p>Indoor positioning system using enhanced WKNN algorithms and Kalman filtering for improved tracking accuracy.</p>
+</div>
+
+<div class="card">
+<h3>Online Rental House Platform</h3>
+<p>Web-based rental management system connecting landlords and tenants with secure authentication and database integration.</p>
+</div>
+
+</div>
+</section>
+
+<section id="certifications">
+<h2>Academic Achievements</h2>
+<div class="card-container">
+
+<div class="card">
+<h3>M.Tech in Cybersecurity (Ongoing)</h3>
+<p>Advanced specialization in Computer Science & Cybersecurity.</p>
+</div>
+
+<div class="card">
+<h3>B.Tech in Computer Science & Engineering</h3>
+<p>Strong academic foundation in programming, networking, and system security.</p>
+</div>
+
+<div class="card">
+<h3>Cybersecurity Certifications</h3>
+<p>Ethical Hacking, Cloud Computing, Practical Security Labs.</p>
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<h2>Academic Contact</h2>
+<div class="contact-info">
+<p>Email: fathimanidavv@gmail.com</p>
+<p>Location: Kozhikode, Kerala</p>
+<p>Open to Academic Projects & Teaching Opportunities</p>
+</div>
+</section>
+
+<footer>
+© 2026 Fathima Nida V V | Cybersecurity Portfolio
+</footer>
+
 </body>
 </html>
