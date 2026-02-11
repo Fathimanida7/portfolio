@@ -6,152 +6,195 @@
 <title>Fathima Nida V V | Cybersecurity Portfolio</title>
 
 <style>
+
+/* RESET */
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-    font-family: Arial, Helvetica, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family: 'Segoe UI', sans-serif;
 }
 
+/* ANIMATED BACKGROUND */
 body{
-    background:#0d1117;
-    color:#ffffff;
-    line-height:1.6;
+height:100vh;
+color:#ffffff;
+background: linear-gradient(-45deg,#0d1117,#111827,#0f2027,#1f2937);
+background-size:400% 400%;
+animation:gradientMove 15s ease infinite;
+overflow-x:hidden;
 }
 
-/* NAVIGATION */
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* FLOATING PARTICLES */
+body::before{
+content:"";
+position:fixed;
+width:200%;
+height:200%;
+background-image: radial-gradient(#00f7ff 1px, transparent 1px);
+background-size:50px 50px;
+opacity:0.05;
+animation: moveParticles 60s linear infinite;
+z-index:-1;
+}
+
+@keyframes moveParticles{
+from{transform:translate(0,0);}
+to{transform:translate(-500px,-500px);}
+}
+
+/* NAVBAR */
 nav{
-    position:fixed;
-    width:100%;
-    top:0;
-    left:0;
-    background:#0d1117;
-    padding:20px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    border-bottom:1px solid #1f2937;
-    z-index:1000;
+position:fixed;
+width:100%;
+top:0;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+backdrop-filter: blur(10px);
+background:rgba(0,0,0,0.4);
+border-bottom:1px solid rgba(255,255,255,0.1);
+z-index:1000;
 }
 
 nav h1{
-    font-size:18px;
+font-size:18px;
+letter-spacing:2px;
 }
 
 nav ul{
-    list-style:none;
-    display:flex;
-    gap:25px;
+list-style:none;
+display:flex;
+gap:30px;
 }
 
 nav ul li a{
-    color:#ccc;
-    text-decoration:none;
-    font-size:14px;
-    transition:0.3s;
+color:#ccc;
+text-decoration:none;
+font-size:14px;
+transition:0.3s;
 }
 
 nav ul li a:hover{
-    color:#00f7ff;
+color:#00f7ff;
 }
 
-/* SECTION STRUCTURE */
+/* SECTIONS */
 section{
-    padding:120px 8%;
-    max-width:1200px;
-    margin:auto;
-}
-
-section h2{
-    text-align:center;
-    margin-bottom:40px;
-    font-size:32px;
+padding:120px 8%;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
 }
 
 /* HERO */
 .hero{
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
+text-align:center;
 }
 
 .hero h2{
-    font-size:42px;
-    max-width:900px;
+font-size:60px;
+letter-spacing:3px;
+margin-bottom:20px;
+background:linear-gradient(90deg,#00f7ff,#ffffff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
 .hero p{
-    margin-top:20px;
-    max-width:700px;
-    color:#aaa;
+max-width:700px;
+margin:0 auto;
+font-size:18px;
+color:#cccccc;
+line-height:1.8;
 }
 
 .btn{
-    margin-top:30px;
-    padding:12px 25px;
-    border:1px solid #00f7ff;
-    color:#00f7ff;
-    text-decoration:none;
-    width:fit-content;
-    transition:0.3s;
+margin-top:40px;
+display:inline-block;
+padding:14px 30px;
+border:1px solid #00f7ff;
+color:#00f7ff;
+text-decoration:none;
+transition:0.4s;
+border-radius:5px;
 }
 
 .btn:hover{
-    background:#00f7ff;
-    color:#000;
+background:#00f7ff;
+color:#000;
+transform:scale(1.05);
+box-shadow:0 0 20px #00f7ff;
 }
 
-/* CARDS */
+/* HEADINGS */
+section h2{
+text-align:center;
+margin-bottom:60px;
+font-size:36px;
+}
+
+/* CARD GRID */
 .card-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:25px;
-    margin-top:30px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
 }
 
 .card{
-    background:#161b22;
-    padding:25px;
-    border-radius:10px;
-    border:1px solid #1f2937;
-    transition:0.3s;
+background:rgba(255,255,255,0.05);
+padding:30px;
+border-radius:15px;
+border:1px solid rgba(255,255,255,0.1);
+backdrop-filter:blur(10px);
+transition:0.4s;
 }
 
 .card:hover{
-    transform:translateY(-5px);
-    border-color:#00f7ff;
+transform:translateY(-10px);
+border-color:#00f7ff;
+box-shadow:0 10px 30px rgba(0,247,255,0.2);
 }
 
 .card h3{
-    margin-bottom:15px;
-    font-size:18px;
+margin-bottom:15px;
+font-size:18px;
 }
 
 .card p{
-    font-size:14px;
-    color:#ccc;
+color:#cccccc;
+font-size:14px;
+line-height:1.6;
 }
 
 /* CONTACT */
 .contact-info{
-    max-width:600px;
-    margin:auto;
-    text-align:center;
+text-align:center;
+max-width:600px;
+margin:auto;
 }
 
 .contact-info p{
-    margin:10px 0;
+margin:12px 0;
 }
 
 /* FOOTER */
 footer{
-    text-align:center;
-    padding:25px;
-    background:#161b22;
-    margin-top:40px;
+text-align:center;
+padding:25px;
+background:rgba(0,0,0,0.5);
+border-top:1px solid rgba(255,255,255,0.1);
 }
+
 </style>
 </head>
 
@@ -163,7 +206,6 @@ footer{
 <li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
-<li><a href="#certifications">Achievements</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
@@ -171,42 +213,21 @@ footer{
 <section class="hero">
 <h2>FATHIMA NIDA V V</h2>
 <p>
-M.Tech in Cybersecurity | Passionate about Teaching, Research & Academic Excellence. Aiming to pursue a career as an Assistant/Associate Professor in Cybersecurity and Computer Science.
+M.Tech in Cybersecurity | Passionate about Teaching, Research & Academic Excellence.  
+Aiming to pursue a career as an Assistant/Associate Professor in Cybersecurity and Computer Science.
 </p>
 <a href="#projects" class="btn">View My Work</a>
 </section>
 
 <section id="about">
 <h2>About Me</h2>
-<p style="margin-top:20px; max-width:800px;">
-I'm a passionate Computer Science graduate with a specialization in Cybersecurity, currently pursuing my M.Tech at Cochin University of Science and Technology. With a strong foundation in software engineering and a focus on security, I develop innovative solutions to protect digital assets and infrastructure. My long-term goal is to build a career in academia 
-as an Assistant Professor, contributing to research, innovation, and student development.
-
-I am deeply interested in teaching subjects such as Network Security, Digital Forensics,Cryptography, Web Security, and Ethical Hacking.
+<div class="card">
+<p>
+I am currently pursuing M.Tech in Cybersecurity with a strong academic foundation 
+in Computer Science and Engineering. My goal is to build a career in academia 
+as an Assistant/Associate Professor, contributing to research and student development.
 </p>
-    <section id="education">
-<h2>Education</h2>
-
-<div class="card-container">
-
-<div class="card">
-<h3>M.Tech in Computer Science & Engineering</h3>
-<p><strong>Institution:</strong> Cochin University of Science and Technology (CUSAT)</p>
-<p><strong>Duration:</strong> 2024 – Present</p>
-<p><strong>CGPA:</strong> 9.15 / 10</p>
-<p><strong>Specialization:</strong> Cyber Security</p>
 </div>
-
-<div class="card">
-<h3>B.Tech in Computer Science & Engineering</h3>
-<p><strong>Institution:</strong> KMCT College of Engineering For Women</p>
-<p><strong>Duration:</strong> 2020 – 2024</p>
-<p><strong>CGPA:</strong> 7.94 / 10</p>
-</div>
-
-</div>
-</section>
-
 </section>
 
 <section id="skills">
@@ -220,7 +241,7 @@ I am deeply interested in teaching subjects such as Network Security, Digital Fo
 
 <div class="card">
 <h3>Teaching Interests</h3>
-<p>Network Security, Cryptography, Digital Forensics, Ethical Hacking, Web Security</p>
+<p>Network Security, Cryptography, Digital Forensics, Ethical Hacking</p>
 </div>
 
 <div class="card">
@@ -233,60 +254,6 @@ I am deeply interested in teaching subjects such as Network Security, Digital Fo
 <p>Analytical Thinking, Research Orientation, Student Mentoring</p>
 </div>
 
-<div class="card">
-<h3>Platforms</h3>
-<p>Kali Linux, Windows</p>
-</div>
-
-</div>
-</section>
-
-<section id="projects">
-<h2>Research & Academic Projects</h2>
-<div class="card-container">
-
-<div class="card">
-<h3>Multi-Layer Security Algorithm (ENP)</h3>
-<p>Multi-layer authentication framework using SHA-256, AES encryption and negative password transformation to secure credentials against brute-force and dictionary attacks.</p>
-</div>
-
-<div class="card">
-<h3>Smart Attendance System</h3>
-<p>Facial recognition-based attendance system integrated with Firebase authentication and role-based dashboards for automated tracking.</p>
-</div>
-
-<div class="card">
-<h3>Wi-Fi Indoor Location Tracking</h3>
-<p>Indoor positioning system using enhanced WKNN algorithms and Kalman filtering for improved tracking accuracy.</p>
-</div>
-
-<div class="card">
-<h3>Online Rental House Platform</h3>
-<p>Web-based rental management system connecting landlords and tenants with secure authentication and database integration.</p>
-</div>
-
-</div>
-</section>
-
-<section id="certifications">
-<h2>Academic Achievements</h2>
-<div class="card-container">
-
-<div class="card">
-<h3>M.Tech in Cybersecurity (Ongoing)</h3>
-<p>Advanced specialization in Computer Science & Cybersecurity.</p>
-</div>
-
-<div class="card">
-<h3>B.Tech in Computer Science & Engineering</h3>
-<p>Strong academic foundation in programming, networking, and system security.</p>
-</div>
-
-<div class="card">
-<h3>Cybersecurity Certifications</h3>
-<p>Ethical Hacking, Cloud Computing, Practical Security Labs.</p>
-</div>
-
 </div>
 </section>
 
@@ -294,8 +261,8 @@ I am deeply interested in teaching subjects such as Network Security, Digital Fo
 <h2>Academic Contact</h2>
 <div class="contact-info">
 <p>Email: fathimanidavv@gmail.com</p>
-<p>Location: Kozhikode, Kerala</p>
-<p>Open to Academic Projects & Teaching Opportunities</p>
+<p>Kozhikode, Kerala</p>
+<p>Open to Research Collaboration & Teaching Opportunities</p>
 </div>
 </section>
 
