@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fathima Nida V V | Portfolio</title>
+<title>Fathima Nida V V | Cybersecurity Portfolio</title>
 
 <style>
 
@@ -12,27 +12,55 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
 scroll-behavior:smooth;
+font-family: 'Segoe UI', sans-serif;
 }
 
+/* BODY + ANIMATED BACKGROUND */
 body{
-background:#0d1117;
-color:#fff;
+color:#ffffff;
+background: linear-gradient(-45deg,#0d1117,#111827,#0f2027,#1f2937);
+background-size:400% 400%;
+animation:gradientMove 15s ease infinite;
 overflow-x:hidden;
+}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* PARTICLES */
+body::before{
+content:"";
+position:fixed;
+width:200%;
+height:200%;
+background-image: radial-gradient(#00f7ff 1px, transparent 1px);
+background-size:50px 50px;
+opacity:0.04;
+animation: moveParticles 60s linear infinite;
+z-index:-1;
+}
+
+@keyframes moveParticles{
+from{transform:translate(0,0);}
+to{transform:translate(-500px,-500px);}
 }
 
 /* NAVBAR */
 nav{
 position:fixed;
-top:0;
 width:100%;
+top:0;
+padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 8%;
-background:#0d1117;
-border-bottom:1px solid #111;
+backdrop-filter: blur(12px);
+background:rgba(0,0,0,0.5);
+border-bottom:1px solid rgba(255,255,255,0.1);
 z-index:1000;
 }
 
@@ -50,6 +78,7 @@ gap:30px;
 nav ul li a{
 color:#ccc;
 text-decoration:none;
+font-size:14px;
 transition:0.3s;
 }
 
@@ -59,115 +88,83 @@ color:#00f7ff;
 
 /* SECTIONS */
 section{
-padding:120px 8%;
+padding:140px 8% 100px;
 min-height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 }
 
-section h2{
-text-align:center;
-font-size:40px;
-margin-bottom:50px;
-}
-
 /* HERO */
 .hero{
-position:relative;
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
 text-align:center;
-overflow:hidden;
 }
 
-/* 3D GRID */
-.grid{
-position:absolute;
-bottom:-200px;
-width:200%;
-height:100%;
-background-image:
-linear-gradient(#00f7ff33 1px, transparent 1px),
-linear-gradient(90deg,#00f7ff33 1px, transparent 1px);
-background-size:50px 50px;
-transform: perspective(600px) rotateX(60deg);
-animation: moveGrid 10s linear infinite;
-z-index:0;
-}
-
-@keyframes moveGrid{
-from{background-position:0 0;}
-to{background-position:0 50px;}
-}
-
-/* HERO TEXT */
 .hero h2{
-font-size:70px;
+font-size:60px;
 letter-spacing:3px;
 margin-bottom:20px;
-z-index:1;
-}
-
-.hero h3{
-font-size:28px;
-color:#aaa;
-margin-bottom:20px;
-z-index:1;
+background:linear-gradient(90deg,#00f7ff,#ffffff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:fadeIn 1.5s ease;
 }
 
 .hero p{
-color:#ccc;
-margin-bottom:40px;
-z-index:1;
+max-width:750px;
+margin:0 auto;
+font-size:18px;
+color:#cccccc;
+line-height:1.8;
+animation:fadeIn 2.5s ease;
 }
 
-.btn-container{
-display:flex;
-gap:20px;
-z-index:1;
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
 }
 
 .btn{
-padding:14px 35px;
-border-radius:30px;
+margin-top:40px;
+display:inline-block;
+padding:14px 30px;
 border:1px solid #00f7ff;
 color:#00f7ff;
 text-decoration:none;
 transition:0.4s;
-}
-
-.btn.primary{
-background:#ddd;
-color:#000;
-border:none;
+border-radius:6px;
 }
 
 .btn:hover{
+background:#00f7ff;
+color:#000;
 transform:scale(1.05);
 box-shadow:0 0 20px #00f7ff;
 }
 
+/* HEADINGS */
+section h2{
+text-align:center;
+margin-bottom:60px;
+font-size:36px;
+}
+
 /* ABOUT CARD */
 .about-card{
-max-width:900px;
-margin:0 auto;
+max-width:800px;
+margin:auto;
 background:rgba(255,255,255,0.05);
 padding:40px;
 border-radius:15px;
 border:1px solid rgba(255,255,255,0.1);
 backdrop-filter:blur(10px);
 line-height:1.8;
-color:#ccc;
 }
 
 /* CARD GRID */
 .card-container{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
 }
 
@@ -176,6 +173,7 @@ background:rgba(255,255,255,0.05);
 padding:30px;
 border-radius:15px;
 border:1px solid rgba(255,255,255,0.1);
+backdrop-filter:blur(10px);
 transition:0.4s;
 }
 
@@ -187,31 +185,33 @@ box-shadow:0 10px 30px rgba(0,247,255,0.2);
 
 .card h3{
 margin-bottom:15px;
+font-size:18px;
 }
 
 .card p{
-color:#ccc;
+color:#cccccc;
+font-size:14px;
+line-height:1.6;
 }
 
 /* CONTACT */
 .contact-info{
 text-align:center;
-font-size:18px;
-line-height:2;
+max-width:600px;
+margin:auto;
+line-height:1.8;
 }
 
 /* FOOTER */
 footer{
 text-align:center;
-padding:25px;
-background:#111;
+padding:30px;
+background:rgba(0,0,0,0.6);
+border-top:1px solid rgba(255,255,255,0.1);
 }
 
-/* RESPONSIVE */
 @media(max-width:768px){
 .hero h2{font-size:40px;}
-.hero h3{font-size:20px;}
-section{padding:100px 6%;}
 }
 
 </style>
@@ -229,17 +229,12 @@ section{padding:100px 6%;}
 </nav>
 
 <section class="hero">
-<div class="grid"></div>
-
 <h2>FATHIMA NIDA V V</h2>
-<h3>M.Tech Cybersecurity Student & Aspiring Academic</h3>
-<p>Innovating Secure Digital Frontiers</p>
-
-<div class="btn-container">
-<a href="#skills" class="btn primary">View My Work</a>
-<a href="#" class="btn">Download Resume</a>
-</div>
-
+<p>
+M.Tech in Cybersecurity | Passionate about Teaching, Research & Academic Excellence.  
+Aiming to pursue a career as an Assistant/Associate Professor in Cybersecurity and Computer Science.
+</p>
+<a href="#skills" class="btn">Explore My Profile</a>
 </section>
 
 <section id="about">
