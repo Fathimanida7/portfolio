@@ -210,7 +210,75 @@ background:#1e3d2f;
 color:#7cffc4;
 font-size:13px;
 }
-  
+ /* SECTION TITLE */
+.section-title{
+text-align:center;
+font-size:40px;
+margin-bottom:10px;
+}
+
+.underline{
+width:100px;
+height:4px;
+background:#888;
+margin:0 auto 60px;
+border-radius:10px;
+}
+
+/* SKILLS LAYOUT */
+.skills-container{
+display:flex;
+justify-content:center;
+gap:50px;
+flex-wrap:wrap;
+}
+
+/* SKILLS CARD */
+.skills-card{
+background:rgba(255,255,255,0.05);
+padding:40px;
+border-radius:20px;
+width:400px;
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,0.15);
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+transition:0.4s;
+}
+
+.skills-card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 40px rgba(0,247,255,0.2);
+border-color:#00f7ff;
+}
+
+.skills-card h3{
+margin-bottom:25px;
+font-size:22px;
+color:#ccc;
+}
+
+/* TAGS */
+.tags{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+}
+
+.tag{
+padding:10px 18px;
+border-radius:25px;
+border:1px solid #00f7ff;
+color:#00f7ff;
+font-size:14px;
+transition:0.3s;
+}
+
+.tag:hover{
+background:#00f7ff;
+color:#000;
+box-shadow:0 0 15px #00f7ff;
+}
+ 
 /* CONTACT */
 .contact-info{
 text-align:center;
@@ -260,9 +328,8 @@ Passionate about Teaching, Research & Academic Excellence.Aiming to pursue a car
 
 <section id="about">
 <h2>About Me</h2>
-<div class="about-card">
-I'm a passionate Computer Science graduate with a specialization in Cybersecurity, currently pursuing my M.Tech at Cochin University of Science and Technology. With a strong foundation in software engineering and a focus on security, I develop innovative solutions to protect digital assets and infrastructure.I am currently pursuing M.Tech in Cybersecurity with a strong academic foundation 
-in Computer Science and Engineering. My goal is to build a career in academics as an Assistant/Associate Professor, contributing to research, innovation, and student development.  
+<div class="about-text">
+I'm a passionate Computer Science graduate with a specialization in Cybersecurity, currently pursuing my M.Tech at Cochin University of Science and Technology.With a strong foundation in software engineering and a focus on security, I develop innovative solutions to protect digital assets and infrastructure. My goal is to build a career in academics as an Assistant Professor, contributing to research, innovation, and student development.  
 
 I am deeply interested in teaching subjects such as Network Security, Digital Forensics, Cryptography, Web Security, and Ethical Hacking,Web development and guiding students in both theoretical 
 and practical cybersecurity applications.
@@ -294,8 +361,7 @@ and practical cybersecurity applications.
 <h2>Technical Skills</h2>
 <div class="underline"></div>
 
-<div class="skills-grid">
-
+<div class="skills-container">
 <div class="skill-card">
 <h3>Programming Languages</h3>
 <div class="tags">
