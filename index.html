@@ -16,9 +16,8 @@ scroll-behavior:smooth;
 font-family: 'Segoe UI', sans-serif;
 }
 
-/* ANIMATED BACKGROUND */
+/* BODY + ANIMATED BACKGROUND */
 body{
-height:100vh;
 color:#ffffff;
 background: linear-gradient(-45deg,#0d1117,#111827,#0f2027,#1f2937);
 background-size:400% 400%;
@@ -32,7 +31,7 @@ overflow-x:hidden;
 100%{background-position:0% 50%;}
 }
 
-/* FLOATING PARTICLES */
+/* PARTICLES */
 body::before{
 content:"";
 position:fixed;
@@ -40,7 +39,7 @@ width:200%;
 height:200%;
 background-image: radial-gradient(#00f7ff 1px, transparent 1px);
 background-size:50px 50px;
-opacity:0.05;
+opacity:0.04;
 animation: moveParticles 60s linear infinite;
 z-index:-1;
 }
@@ -59,8 +58,8 @@ padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-backdrop-filter: blur(10px);
-background:rgba(0,0,0,0.4);
+backdrop-filter: blur(12px);
+background:rgba(0,0,0,0.5);
 border-bottom:1px solid rgba(255,255,255,0.1);
 z-index:1000;
 }
@@ -89,7 +88,7 @@ color:#00f7ff;
 
 /* SECTIONS */
 section{
-padding:120px 8%;
+padding:140px 8% 100px;
 min-height:100vh;
 display:flex;
 flex-direction:column;
@@ -108,14 +107,21 @@ margin-bottom:20px;
 background:linear-gradient(90deg,#00f7ff,#ffffff);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
+animation:fadeIn 1.5s ease;
 }
 
 .hero p{
-max-width:700px;
+max-width:750px;
 margin:0 auto;
 font-size:18px;
 color:#cccccc;
 line-height:1.8;
+animation:fadeIn 2.5s ease;
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
 }
 
 .btn{
@@ -126,7 +132,7 @@ border:1px solid #00f7ff;
 color:#00f7ff;
 text-decoration:none;
 transition:0.4s;
-border-radius:5px;
+border-radius:6px;
 }
 
 .btn:hover{
@@ -141,6 +147,18 @@ section h2{
 text-align:center;
 margin-bottom:60px;
 font-size:36px;
+}
+
+/* ABOUT CARD */
+.about-card{
+max-width:800px;
+margin:auto;
+background:rgba(255,255,255,0.05);
+padding:40px;
+border-radius:15px;
+border:1px solid rgba(255,255,255,0.1);
+backdrop-filter:blur(10px);
+line-height:1.8;
 }
 
 /* CARD GRID */
@@ -181,18 +199,19 @@ line-height:1.6;
 text-align:center;
 max-width:600px;
 margin:auto;
-}
-
-.contact-info p{
-margin:12px 0;
+line-height:1.8;
 }
 
 /* FOOTER */
 footer{
 text-align:center;
-padding:25px;
-background:rgba(0,0,0,0.5);
+padding:30px;
+background:rgba(0,0,0,0.6);
 border-top:1px solid rgba(255,255,255,0.1);
+}
+
+@media(max-width:768px){
+.hero h2{font-size:40px;}
 }
 
 </style>
@@ -205,7 +224,6 @@ border-top:1px solid rgba(255,255,255,0.1);
 <ul>
 <li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
-<li><a href="#projects">Projects</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
@@ -216,22 +234,24 @@ border-top:1px solid rgba(255,255,255,0.1);
 M.Tech in Cybersecurity | Passionate about Teaching, Research & Academic Excellence.  
 Aiming to pursue a career as an Assistant/Associate Professor in Cybersecurity and Computer Science.
 </p>
-<a href="#projects" class="btn">View My Work</a>
+<a href="#skills" class="btn">Explore My Profile</a>
 </section>
 
 <section id="about">
 <h2>About Me</h2>
-<div class="card">
-<p>
+<div class="about-card">
 I am currently pursuing M.Tech in Cybersecurity with a strong academic foundation 
 in Computer Science and Engineering. My goal is to build a career in academia 
-as an Assistant/Associate Professor, contributing to research and student development.
-</p>
+as an Assistant/Associate Professor, contributing to research, innovation, and student development.  
+
+I am deeply interested in teaching subjects such as Network Security, Digital Forensics, 
+Cryptography, Web Security, and Ethical Hacking, and guiding students in both theoretical 
+and practical cybersecurity applications.
 </div>
 </section>
 
 <section id="skills">
-<h2>Technical Skills</h2>
+<h2>Technical & Academic Profile</h2>
 <div class="card-container">
 
 <div class="card">
