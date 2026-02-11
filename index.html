@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fathima Nida V V | Cybersecurity  Portfolio</title>
 
-<style>
 *{
     margin:0;
     padding:0;
@@ -17,14 +16,16 @@
 body{
     background:#0d1117;
     color:#ffffff;
+    line-height:1.6;
 }
 
+/* NAVIGATION */
 nav{
     position:fixed;
     width:100%;
     top:0;
     background:#0d1117;
-    padding:20px 60px;
+    padding:20px 40px;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -33,46 +34,55 @@ nav{
 }
 
 nav h1{
-    font-size:20px;
+    font-size:18px;
 }
 
 nav ul{
     list-style:none;
     display:flex;
-    gap:30px;
+    gap:25px;
 }
 
 nav ul li a{
     color:#ccc;
     text-decoration:none;
+    font-size:14px;
 }
 
 nav ul li a:hover{
     color:#00f7ff;
 }
 
+/* SECTIONS */
 section{
-    padding:120px 80px;
-    min-height:100vh;
+    padding:120px 10%;
 }
 
+section h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:32px;
+}
+
+/* HERO */
 .hero{
+    min-height:100vh;
     display:flex;
     flex-direction:column;
     justify-content:center;
 }
 
 .hero h2{
-    font-size:50px;
+    font-size:42px;
 }
 
 .hero p{
     margin-top:20px;
-    font-size:20px;
+    max-width:700px;
     color:#aaa;
-    max-width:800px;
 }
 
+/* BUTTON */
 .btn{
     margin-top:30px;
     padding:12px 25px;
@@ -80,6 +90,7 @@ section{
     color:#00f7ff;
     text-decoration:none;
     width:fit-content;
+    transition:0.3s;
 }
 
 .btn:hover{
@@ -87,11 +98,12 @@ section{
     color:#000;
 }
 
+/* CARDS */
 .card-container{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-    margin-top:40px;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+    margin-top:30px;
 }
 
 .card{
@@ -99,20 +111,43 @@ section{
     padding:25px;
     border-radius:10px;
     border:1px solid #1f2937;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#00f7ff;
 }
 
 .card h3{
     margin-bottom:15px;
+    font-size:18px;
+}
+
+.card p{
+    font-size:14px;
+    color:#ccc;
+}
+
+/* CONTACT */
+.contact-info{
+    max-width:600px;
+    margin:auto;
+    text-align:center;
 }
 
 .contact-info p{
     margin:10px 0;
 }
 
+/* FOOTER */
 footer{
     text-align:center;
-    padding:30px;
+    padding:25px;
     background:#161b22;
+    margin-top:40px;
+}
+
 }
 </style>
 </head>
