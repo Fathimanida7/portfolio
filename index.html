@@ -161,6 +161,7 @@ backdrop-filter:blur(10px);
 line-height:1.8;
 }
 
+  
 /* CARD GRID */
 .card-container{
 display:grid;
@@ -194,6 +195,22 @@ font-size:14px;
 line-height:1.6;
 }
 
+  /* TAGS */
+.tags{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:15px;
+}
+
+.tag{
+padding:8px 15px;
+border-radius:20px;
+background:#1e3d2f;
+color:#7cffc4;
+font-size:13px;
+}
+  
 /* CONTACT */
 .contact-info{
 text-align:center;
@@ -223,7 +240,9 @@ border-top:1px solid rgba(255,255,255,0.1);
 <h1>FATHIMA NIDA V V</h1>
 <ul>
 <li><a href="#about">About</a></li>
+<li><a href="#education">Education</a></li>
 <li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
@@ -232,7 +251,7 @@ border-top:1px solid rgba(255,255,255,0.1);
 <h2>FATHIMA NIDA V V</h2>
 <h3>M.Tech Cybersecurity Student & Cybersecurity Specialist</h3>
 <p>
-Passionate about Teaching, Research & Academic Excellence.Aiming to pursue a career as an Assistant/Associate Professor in Cybersecurity and Computer Science.
+Passionate about Teaching, Research & Academic Excellence.Aiming to pursue a career as an Assistant Professor in Cybersecurity and Computer Science.
 </p>
 <div class="btn-container">
 <a href="#" class="btn primary">View My Work</a>
@@ -242,43 +261,135 @@ Passionate about Teaching, Research & Academic Excellence.Aiming to pursue a car
 <section id="about">
 <h2>About Me</h2>
 <div class="about-card">
-I am currently pursuing M.Tech in Cybersecurity with a strong academic foundation 
-in Computer Science and Engineering. My goal is to build a career in academia 
-as an Assistant/Associate Professor, contributing to research, innovation, and student development.  
+I'm a passionate Computer Science graduate with a specialization in Cybersecurity, currently pursuing my M.Tech at Cochin University of Science and Technology. With a strong foundation in software engineering and a focus on security, I develop innovative solutions to protect digital assets and infrastructure.I am currently pursuing M.Tech in Cybersecurity with a strong academic foundation 
+in Computer Science and Engineering. My goal is to build a career in academics as an Assistant/Associate Professor, contributing to research, innovation, and student development.  
 
-I am deeply interested in teaching subjects such as Network Security, Digital Forensics, 
-Cryptography, Web Security, and Ethical Hacking, and guiding students in both theoretical 
+I am deeply interested in teaching subjects such as Network Security, Digital Forensics, Cryptography, Web Security, and Ethical Hacking,Web development and guiding students in both theoretical 
 and practical cybersecurity applications.
+</div>
+<section id="education">
+<h2>Education</h2>
+
+<div class="card-container">
+
+<div class="card">
+<h3>M.Tech in Computer Science & Engineering</h3>
+<p><strong>Institution:</strong> Cochin University of Science and Technology (CUSAT)</p>
+<p><strong>Duration:</strong> 2024 – Present</p>
+<p><strong>CGPA:</strong> 9.15 / 10</p>
+<p><strong>Specialization:</strong> Cyber Security</p>
+</div>
+
+<div class="card">
+<h3>B.Tech in Computer Science & Engineering</h3>
+<p><strong>Institution:</strong> KMCT College of Engineering For Women</p>
+<p><strong>Duration:</strong> 2020 – 2024</p>
+<p><strong>CGPA:</strong> 7.94 / 10</p>
+</div>
+
 </div>
 </section>
 
 <section id="skills">
-<h2>Technical & Academic Profile</h2>
-<div class="card-container">
+<h2>Technical Skills</h2>
+<div class="underline"></div>
 
-<div class="card">
-<h3>Programming</h3>
-<p>Python, C, HTML, CSS</p>
+<div class="skills-grid">
+
+<div class="skill-card">
+<h3>Programming Languages</h3>
+<div class="tags">
+<span class="tag">Python</span>
+<span class="tag">C</span>
+<span class="tag">HTML/CSS</span>
+</div>
 </div>
 
-<div class="card">
+<div class="skill-card">
 <h3>Teaching Interests</h3>
-<p>Network Security, Cryptography, Digital Forensics, Ethical Hacking</p>
+  <div class="tags">
+<span class="tag">Network Security</span>
+<span class="tag">Cryptography</span>
+<span class="tag">Digital Forensics</span>
+<span class="tag">Ethical Hacking</span>
+</div>
 </div>
 
-<div class="card">
+
+<div class="skill-card">
 <h3>Cybersecurity Tools</h3>
-<p>Wireshark, Nmap, Burp Suite, Metasploit</p>
+<div class="tags">
+<span class="tag">Burp Suite</span>
+<span class="tag">Wireshark</span>
+<span class="tag">Metasploit</span>
+<span class="tag">Nmap</span>
+<span class="tag">Aircrack-ng</span>
+</div>
 </div>
 
-<div class="card">
+<div class="skill-card">
 <h3>Academic Strengths</h3>
-<p>Analytical Thinking, Research Orientation, Student Mentoring</p>
+  <div class="tags">
+<span class="tag">Analytical Thinking</span>
+<span class="tag">Research Orientation</span>
+<span class="tag">Student Mentoring</span>
+</div>
 </div>
 
 </div>
 </section>
+<section id="projects">
+<h2>Featured Projects</h2>
+<div class="card-container">
 
+<div class="card">
+<h3>Multi-Layer Security Algorithm (ENP)</h3>
+<p>Designed a multi-layer authentication framework combining SHA-256, Negative Password Transformation, and AES encryption.</p>
+<div class="tags">
+<span class="tag">SHA-256</span>
+<span class="tag">AES</span>
+<span class="tag">Python</span>
+</div>
+</div>
+
+<div class="card">
+<h3>Smart Attendance System</h3>
+<p>Web-based facial recognition attendance system using Firebase Authentication and Firestore.</p>
+<div class="tags">
+<span class="tag">Firebase</span>
+<span class="tag">Face Detection</span>
+<span class="tag">JavaScript</span>
+</div>
+</div>
+
+<div class="card">
+<h3>Wi-Fi Indoor Location Tracking</h3>
+<p>Indoor positioning system using Improved WKNN algorithms and Kalman Filtering.</p>
+<div class="tags">
+<span class="tag">Python</span>
+<span class="tag">MySQL</span>
+<span class="tag">Android</span>
+</div>
+</div>
+  <div class="card">
+<h3>Online Rental House Platform</h3>
+<p>
+Web-based rental management system connecting landlords and tenants 
+with property listing, booking management, and secure authentication.
+</p>
+
+<div class="tags">
+<span class="tag">HTML</span>
+<span class="tag">CSS</span>
+<span class="tag">JavaScript</span>
+<span class="tag">MySQL</span>
+<span class="tag">PHP</span>
+</div>
+</div>
+
+
+</div>
+</section>
 <section id="contact">
 <h2>Academic Contact</h2>
 <div class="contact-info">
