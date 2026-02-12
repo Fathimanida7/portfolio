@@ -62,7 +62,79 @@ z-index:-1;
 from{transform:translate(0,0);}
 to{transform:translate(-500px,-500px);}
 }
+/* CERTIFICATIONS SECTION */
+.cert-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:40px;
+margin-top:60px;
+}
 
+.cert-card{
+background:rgba(255,255,255,0.05);
+padding:35px;
+border-radius:18px;
+border:1px solid rgba(255,255,255,0.1);
+backdrop-filter:blur(10px);
+transition:0.4s;
+}
+
+.cert-card:hover{
+transform:translateY(-10px);
+border-color:#00f7ff;
+box-shadow:0 10px 40px rgba(0,247,255,0.25);
+}
+
+.cert-icon{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.cert-card h3{
+font-size:20px;
+margin-bottom:15px;
+}
+
+.cert-card p{
+color:#cccccc;
+font-size:14px;
+line-height:1.6;
+margin-bottom:20px;
+}
+
+.cert-date{
+font-weight:600;
+color:#ffffff;
+}
+
+/* Same animated underline style */
+.section-title{
+text-align:center;
+font-size:42px;
+margin-bottom:60px;
+position:relative;
+display:inline-block;
+left:50%;
+transform:translateX(-50%);
+}
+
+.section-title::after{
+content:"";
+display:block;
+width:0;
+height:4px;
+margin:15px auto 0;
+background:#00f7ff;
+border-radius:5px;
+animation:expandLine 1s ease forwards;
+}
+
+@keyframes expandLine{
+from{width:0;}
+to{width:120px;}
+}
+
+    
 /* NAVBAR */
 nav{
 position:fixed;
@@ -950,6 +1022,54 @@ with property listing, booking management, and secure authentication.
 </div>
 </section>
 
+
+<section id="certifications">
+<h2 class="section-title">Certifications</h2>
+
+<div class="cert-container">
+
+<div class="cert-card">
+<div class="cert-icon">🛡️</div>
+<h3>Cyber Security and Ethical Hacking</h3>
+<span class="cert-date">(05 / 2022)</span>
+</div>
+
+    <div class="cert-card">
+<div class="cert-icon">🔐</div>
+<h3>Foundation of Security – Google</h3>
+<span class="cert-date">(02 / 2024)</span>
+</div>
+    
+<div class="cert-card">
+<div class="cert-icon">🤖</div>
+<h3>Introduction to Machine Learning</h3>
+<span class="cert-date">(01 / 2023 – 02 / 2023)</span>
+</div>
+
+<div class="cert-card">
+<div class="cert-icon">📊</div>
+<h3>Data Analysis Using Python (ICFOSS)</h3>
+<span class="cert-date">(04 / 2023)</span>
+</div>
+
+<div class="cert-card">
+<div class="cert-icon">☁️</div>
+<h3>Cyber Security AWS and Data Science</h3>
+<span class="cert-date">(09 / 2023 – 10 / 2023)</span>
+</div>
+
+<div class="cert-card">
+<div class="cert-icon">🌐</div>
+<h3>NPTEL Online Certification in Cloud Computing and Distributed Systems</h3>
+<span class="cert-date">(01 / 2025 – 03 / 2025)</span>
+</div>
+
+</div>
+</section>
+
+
+
+    
 <section id="contact">
 <h2>Academic Contact</h2>
 <div class="contact-info">
