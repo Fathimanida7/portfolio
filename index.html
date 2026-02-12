@@ -752,16 +752,44 @@ box-shadow:0 0 15px #00f7ff, 0 0 30px #00f7ff;
 }
 
 /* Moving grid lines */
-.hero {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
+.hero::before {
+    content: "";
+    position: absolute;
+    bottom: -20%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-image: 
+        linear-gradient(to right, rgba(0,255,255,0.25) 1px, transparent 1px),
+        linear-gradient(to top, rgba(0,255,255,0.25) 1px, transparent 1px);
+    background-size: 60px 60px;
+    transform: perspective(900px) rotateX(65deg);
+    transform-origin: bottom center;
+    animation: moveGrid 8s linear infinite;
+    z-index: 0;
 }
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.2), #0b1c2d 75%);
+    z-index: 1;
+}
+    .hero > * {
+    position: relative;
+    z-index: 2;
+}
+@keyframes moveGrid {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 60px;
+    }
+}
+
 
 
 
@@ -1328,11 +1356,13 @@ resource management, and scalable system design principles.
 <div class="contact-wrapper">
 
 <!-- LEFT SIDE -->
-<div class="contact-info">
+<div class="contact-left">
+
+    <h3 class="contact-heading">Contact Information</h3>
 
     <div class="contact-item">
         <div class="contact-icon">📍</div>
-        <div class="contact-text">
+        <div>
             <h4>Location</h4>
             <p>Kozhikode, Kerala, India</p>
         </div>
@@ -1340,7 +1370,7 @@ resource management, and scalable system design principles.
 
     <div class="contact-item">
         <div class="contact-icon">✉️</div>
-        <div class="contact-text">
+        <div>
             <h4>Email</h4>
             <p>fathimanidavv@gmail.com</p>
         </div>
@@ -1348,13 +1378,14 @@ resource management, and scalable system design principles.
 
     <div class="contact-item">
         <div class="contact-icon">📞</div>
-        <div class="contact-text">
+        <div>
             <h4>Phone</h4>
             <p>+91 8136878791</p>
         </div>
     </div>
 
 </div>
+
 
 
 
