@@ -358,6 +358,43 @@ color:#cccccc;
 font-size:14px;
 line-height:1.6;
 }
+/* EDUCATION TITLE */
+.education-title{
+font-size:42px;
+text-align:center;
+position:relative;
+display:inline-block;
+margin-bottom:60px;
+}
+
+/* 3D Animated Underline */
+.education-title::after{
+content:"";
+position:absolute;
+left:50%;
+bottom:-12px;
+transform:translateX(-50%);
+width:120px;
+height:5px;
+border-radius:10px;
+background:linear-gradient(90deg,#00f7ff,#00c3ff,#00f7ff);
+background-size:200% 200%;
+animation:glowLine 3s ease infinite;
+box-shadow:0 0 15px #00f7ff, 0 0 30px #00f7ff;
+}
+
+/* Animation */
+@keyframes glowLine{
+0%{
+background-position:0% 50%;
+}
+50%{
+background-position:100% 50%;
+}
+100%{
+background-position:0% 50%;
+}
+}
 
   /* TAGS */
 .tags{
@@ -462,6 +499,37 @@ border-top:1px solid rgba(255,255,255,0.1);
 @media(max-width:768px){
 .hero h2{font-size:40px;}
 }
+/* FEATURED PROJECTS TITLE */
+.featured-title{
+font-size:42px;
+text-align:center;
+position:relative;
+display:inline-block;
+margin-bottom:60px;
+}
+
+/* 3D Animated Underline */
+.featured-title::after{
+content:"";
+position:absolute;
+left:50%;
+bottom:-12px;
+transform:translateX(-50%);
+width:150px;
+height:5px;
+border-radius:10px;
+background:linear-gradient(90deg,#00f7ff,#00c3ff,#00f7ff);
+background-size:200% 200%;
+animation:glowLine 3s ease infinite;
+box-shadow:0 0 15px #00f7ff, 0 0 30px #00f7ff;
+}
+
+/* Reuse same animation */
+@keyframes glowLine{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
 
 </style>
 </head>
@@ -509,7 +577,7 @@ and guiding students in both theoretical and practical cybersecurity application
 </section>
 
 <section id="education">
-<h2>Education</h2>
+<h2 class="education-title">Education</h2>
 
 <div class="card-container">
 
@@ -583,7 +651,7 @@ and guiding students in both theoretical and practical cybersecurity application
 </section>
   
 <section id="projects">
-<h2>Featured Projects</h2>
+<h2 class="featured-title">Featured Projects</h2>
 <div class="card-container">
 
 <div class="card">
