@@ -413,6 +413,56 @@ color:#ccc;
 margin-bottom:20px;
 line-height:1.6;
 }
+/* EDUCATION GRID */
+.education-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1100px;
+    margin: 60px auto 0;
+}
+
+/* EDUCATION CARD */
+.education-card{
+    background: rgba(255,255,255,0.06);
+    padding: 35px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    transition: 0.4s ease;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Card Hover */
+.education-card:hover{
+    transform: translateY(-8px);
+    border-color: #00f7ff;
+    box-shadow: 0 15px 35px rgba(0,247,255,0.25);
+}
+
+/* Title */
+.education-card h3{
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+/* Text */
+.education-card p{
+    margin-bottom: 8px;
+    color: #cfcfcf;
+    font-size: 15px;
+}
+
+/* Responsive */
+@media(max-width: 900px){
+    .education-grid{
+        grid-template-columns: 1fr;
+    }
+}
 
 /* EDUCATION TITLE */
 .education-title{
@@ -726,27 +776,28 @@ Passionate about Teaching, Research & Academic Excellence.Aiming to pursue a car
 
 
 <section id="education">
-<h2 class="education-title">Education</h2>
+    <h2 class="section-title">EDUCATION</h2>
 
-<div class="card-container">
+    <div class="education-grid">
 
-<div class="card">
-<h3>M.Tech in Computer Science & Engineering</h3>
-<p><strong>Institution:</strong> Cochin University of Science and Technology (CUSAT)</p>
-<p><strong>Duration:</strong> 2024 – Present</p>
-<p><strong>CGPA:</strong> 9.15 / 10</p>
-<p><strong>Specialization:</strong> Cyber Security</p>
-</div>
+        <div class="education-card">
+            <h3>M.Tech in Computer Science & Engineering</h3>
+            <p><strong>Institution:</strong> Cochin University of Science and Technology (CUSAT)</p>
+            <p><strong>Duration:</strong> 2024 – Present</p>
+            <p><strong>CGPA:</strong> 9.15 / 10</p>
+            <p><strong>Specialization:</strong> Cyber Security</p>
+        </div>
 
-<div class="card">
-<h3>B.Tech in Computer Science & Engineering</h3>
-<p><strong>Institution:</strong> KMCT College of Engineering For Women</p>
-<p><strong>Duration:</strong> 2020 – 2024</p>
-<p><strong>CGPA:</strong> 7.94 / 10</p>
-</div>
+        <div class="education-card">
+            <h3>B.Tech in Computer Science & Engineering</h3>
+            <p><strong>Institution:</strong> KMCT College of Engineering For Women</p>
+            <p><strong>Duration:</strong> 2020 – 2024</p>
+            <p><strong>CGPA:</strong> 7.94 / 10</p>
+        </div>
 
-</div>
+    </div>
 </section>
+
 
 <section id="skills">
 <h2 class="section-title">Technical Skills</h2>
