@@ -206,6 +206,56 @@ text-align:center;
 margin-bottom:60px;
 font-size:36px;
 }
+/* ABOUT SECTION */
+#about{
+padding:140px 10%;
+text-align:center;
+}
+
+.about-title{
+font-size:42px;
+position:relative;
+display:inline-block;
+margin-bottom:50px;
+}
+
+/* Animated Underline */
+.about-title::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-10px;
+width:0%;
+height:4px;
+background:#00f7ff;
+transition:width 0.6s ease;
+}
+
+.about-title:hover::after{
+width:100%;
+}
+
+/* Bigger Content */
+.about-text{
+font-size:20px;
+line-height:1.9;
+max-width:900px;
+margin:auto;
+color:#dddddd;
+animation:fadeUp 1.2s ease;
+}
+
+/* Smooth Fade Animation */
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
 
 /* ABOUT CARD */
 .about-card{
@@ -441,13 +491,23 @@ Passionate about Teaching, Research & Academic Excellence.Aiming to pursue a car
 </div></section>
 
 <section id="about">
-<h2>About Me</h2>
-<div class="about-text">
-I'm a passionate Computer Science graduate with a specialization in Cybersecurity, currently pursuing my M.Tech at Cochin University of Science and Technology.With a strong foundation in software engineering and a focus on security, I develop innovative solutions to protect digital assets and infrastructure. My goal is to build a career in academics as an Assistant Professor, contributing to research, innovation, and student development.  
+<h2 class="about-title">About Me</h2>
 
-I am deeply interested in teaching subjects such as Network Security, Digital Forensics, Cryptography, Web Security, and Ethical Hacking,Web development and guiding students in both theoretical 
-and practical cybersecurity applications.
-</div>
+<p class="about-text">
+I'm a passionate Computer Science graduate with a specialization in Cybersecurity,
+currently pursuing my M.Tech at Cochin University of Science and Technology.
+With a strong foundation in software engineering and a focus on security,
+I develop innovative solutions to protect digital assets and infrastructure.
+
+My goal is to build a career in academics as an Assistant Professor,
+contributing to research, innovation, and student development.
+I am deeply interested in teaching subjects such as Network Security,
+Digital Forensics, Cryptography, Web Security, Ethical Hacking,
+and guiding students in both theoretical and practical cybersecurity applications.
+</p>
+
+</section>
+
 <section id="education">
 <h2>Education</h2>
 
