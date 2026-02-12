@@ -136,29 +136,35 @@ to{width:120px;}
 
     
 /* NAVBAR */
-nav{
-position:fixed;
-width:100%;
-top:0;
-padding:20px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-backdrop-filter: blur(12px);
-background:rgba(0,0,0,0.5);
-border-bottom:1px solid rgba(255,255,255,0.1);
-z-index:1000;
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 20px 5%;   /* was 8% – reduced */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(12px);
+    background: rgba(0,0,0,0.6);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    z-index: 1000;
 }
+
 
 nav h1{
 font-size:18px;
 letter-spacing:2px;
 }
 
-nav ul{
-list-style:none;
-display:flex;
-gap:30px;
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;   /* was 30px – reduce */
+}
+
+nav ul li a {
+    font-size: 15px;
+    white-space: nowrap;   /* prevents breaking */
 }
 
 nav ul li a{
