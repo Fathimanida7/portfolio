@@ -358,6 +358,46 @@ color:#cccccc;
 font-size:14px;
 line-height:1.6;
 }
+  /* PROJECT CARD WITH IMAGE */
+.project-card{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+border-radius:20px;
+overflow:hidden;
+transition:0.4s;
+backdrop-filter:blur(10px);
+}
+
+.project-card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 40px rgba(0,247,255,0.2);
+border-color:#00f7ff;
+}
+
+/* IMAGE PART */
+.project-image{
+width:100%;
+height:220px;
+object-fit:cover;
+display:block;
+}
+
+/* CONTENT PART */
+.project-content{
+padding:30px;
+}
+
+.project-content h3{
+margin-bottom:15px;
+font-size:22px;
+}
+
+.project-content p{
+color:#ccc;
+margin-bottom:20px;
+line-height:1.6;
+}
+
 /* EDUCATION TITLE */
 .education-title{
 font-size:42px;
@@ -457,6 +497,25 @@ margin-bottom:25px;
 font-size:22px;
 color:#ccc;
 }
+  /* PROJECT IMAGE */
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-top-left-radius:15px;
+border-top-right-radius:15px;
+}
+
+/* Adjust card padding when image is used */
+.card{
+overflow:hidden;
+padding:0;
+}
+
+.card-content{
+padding:25px;
+}
+
 
 /* TAGS */
 .tags{
@@ -654,42 +713,70 @@ and guiding students in both theoretical and practical cybersecurity application
 <h2 class="featured-title">Featured Projects</h2>
 <div class="card-container">
 
+<!-- ENP -->
 <div class="card">
+<img src="images/enp.jpg" alt="ENP Project">
+
+<div class="card-content">
 <h3>Multi-Layer Security Algorithm (ENP)</h3>
-<p>Designed a multi-layer authentication framework combining SHA-256, Negative Password Transformation, and AES encryption.</p>
+<p>
+Designed a multi-layer authentication framework combining SHA-256, 
+Negative Password Transformation, and AES encryption.
+</p>
 <div class="tags">
 <span class="tag">SHA-256</span>
 <span class="tag">AES</span>
 <span class="tag">Python</span>
 </div>
 </div>
+</div>
 
+<!-- Attendance -->
 <div class="card">
+<img src="images/attendance.jpg" alt="Smart Attendance">
+
+<div class="card-content">
 <h3>Smart Attendance System</h3>
-<p>Web-based facial recognition attendance system using Firebase Authentication and Firestore.</p>
+<p>
+Web-based facial recognition attendance system using Firebase 
+Authentication and Firestore.
+</p>
 <div class="tags">
 <span class="tag">Firebase</span>
 <span class="tag">Face Detection</span>
 <span class="tag">JavaScript</span>
 </div>
 </div>
+</div>
 
+<!-- WiFi -->
 <div class="card">
+<img src="images/wifi.jpg" alt="WiFi Tracking">
+
+<div class="card-content">
 <h3>Wi-Fi Indoor Location Tracking</h3>
-<p>Indoor positioning system using Improved WKNN algorithms and Kalman Filtering.</p>
+<p>
+Indoor positioning system using Improved WKNN algorithms 
+and Kalman Filtering.
+</p>
 <div class="tags">
 <span class="tag">Python</span>
 <span class="tag">MySQL</span>
 <span class="tag">Android</span>
 </div>
 </div>
-  <div class="card">
+</div>
+
+<!-- Rental -->
+<div class="card">
+<img src="images/rental.jpg" alt="Online Rental House">
+
+<div class="card-content">
 <h3>Online Rental House Platform</h3>
 <p>
 Web-based rental management system connecting landlords and tenants 
 with property listing, booking management, and secure authentication.
 </p>
-
 <div class="tags">
 <span class="tag">HTML</span>
 <span class="tag">CSS</span>
@@ -698,10 +785,11 @@ with property listing, booking management, and secure authentication.
 <span class="tag">PHP</span>
 </div>
 </div>
-
+</div>
 
 </div>
 </section>
+
 <section id="contact">
 <h2>Academic Contact</h2>
 <div class="contact-info">
