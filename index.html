@@ -693,6 +693,29 @@ background:#00f7ff;
 color:#000;
 box-shadow:0 0 15px #00f7ff;
 }
+.hero{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+#particles-js{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.hero-content{
+    position: relative;
+    z-index: 2;
+}
  
 /* CONTACT */
 .contact-info{
@@ -1128,8 +1151,11 @@ box-shadow:0 0 20px #00f7ff;
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
-
 <section class="hero">
+    
+    <div id="particles-js"></div>
+
+    <div class="hero-content">
 <h2>FATHIMA NIDA V V</h2>
 <h3>M.Tech Cybersecurity Student & Cybersecurity Specialist</h3>
 <p>
@@ -1495,6 +1521,33 @@ resource management, and scalable system design principles.
 
 </footer>
 
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80 },
+    color: { value: "#00f7ff" },
+    shape: { type: "circle" },
+    opacity: { value: 0.5 },
+    size: { value: 3 },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#00f7ff",
+      opacity: 0.4,
+      width: 1
+    },
+    move: { enable: true, speed: 2 }
+  },
+  interactivity: {
+    events: {
+      onhover: { enable: true, mode: "repulse" }
+    }
+  },
+  retina_detect: true
+});
+</script>
 
 
 </body>
