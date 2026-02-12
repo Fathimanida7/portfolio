@@ -8,7 +8,7 @@
 
 <style>
 
-/* RESET */
+/* RESET */F
 *{
 margin:0;
 padding:0;
@@ -1431,14 +1431,20 @@ resource management, and scalable system design principles.
 
 <h3>Send Me a Message</h3>
 
-<form>
-<input type="text" placeholder="Name" required>
-<input type="email" placeholder="Email" required>
-<input type="text" placeholder="Subject" required>
-<textarea rows="5" placeholder="Message" required></textarea>
+<form action="https://formspree.io/f/mojnejoa" method="POST">
 
-<button type="submit" class="send-btn">Send Message</button>
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="email" name="email" placeholder="Your Email" required>
+
+<input type="text" name="subject" placeholder="Subject" required>
+
+<textarea name="message" placeholder="Message" required></textarea>
+
+<button type="submit">Send Message</button>
+
 </form>
+
 
 </div>
 
